@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS PC STORE</title>
+    <link rel="stylesheet" href="styler.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <div id=navbar>
+            <i class="fa fa-university" aria-hidden="true"  onclick="toHome()"></i>
+            <a class="nav">Home</a>
+        </div>
+        <div id=navbar>
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <a>Cart</a>
+        </div>
+        <div id=navbar>
+            <i class="fa-solid fa-address-card" onclick="toAbout()"></i>
+            <a onclick="toAbout()">About us</a>
+        </div>
+        <div id=navbar>
+            <i class="fa-solid fa-user"></i>
+            <a>Profile</a>
+        </div>
+    </div>
+    <div class="content-body">
+        <h1>Welcome to Nexus PC Store</h1>
+        <!-- FIRST ROW -->
+        <div class="general-row">
+            <div class="card">
+                <img src="./laptop1.png" alt="">
+                <p id="laptop1">Hp 250 G7 Intel Celeron - 8GB RAM - 1TB HDD - Windows 10 With Bag price= ₦350,000</p>
+                <button class="general-btn" onclick="add1()">Add to cart</button>
+            </div>
+            <div class="card">
+                <img src="./laptop2.png" alt="">
+                <p id="laptop2">Hp EliteBook 840 G5 Core I7-16GB RAM1TB SSDBacklit KeyboardFP Reader WIN 11Pro+BAG price= ₦650,000</p>
+                <button class="general-btn">Add to cart</button>
+            </div>
+            <div class="card">
+                <img src="./laptop3.png" alt="">
+                <p id="laptop3">Hp EliteBook 840 G5 Core I7-16GB RAM1TB SSDBacklit KeyboardFP Reader WIN 11Pro+BAG price= ₦650,000</p>
+                <button class="general-btn">Add to cart</button>
+            </div>
+            <div class="card">
+                <img src="./laptop4.png" alt="">
+                <p id="laptop4">Hp EliteBook 840 G6 Intel Core I5 8GB RAM1TB SSDBacklit Keyboard Finger Print Reader Wins 11 Pro price=₦ 558,000</p>
+                <button class="general-btn">Add to cart</button>
+            </div>
+        </div>
+        <!-- SECOND ROW -->
+        <div class="general-row">
+            <div class="card">
+                <img src="./laptop8.png" alt="">
+                <p id="laptop5">Microsoft-Surface-Laptop-6- Intel-Core-Ultra-7-Processor Win-11-Pro-₦ 1,880,000</p>
+                <button class="general-btn">Add to cart</button>
+            </div>
+            <div class="card">
+                <img src="./laptop5.png    " alt="">
+                <p id="laptop6">Hp EliteBook 840 G6 Intel Core I7-16GB RAM1TB SSDBacklit Keyboard-WIN 11 Pro+ BAG price= ₦670,000</p>
+                <button class="general-btn">Add to cart</button>
+            </div>
+            <div class="card">
+                <img src="./laptop6.png" alt="">
+                <p id="laptop7">Hp EliteBook 845 G8- Ryzen 5 Pro 5650UAMD 2.3 - 16GB RAM512GB SSD WIN 11 PRO+BAG price= ₦ 505,000</p>
+                <button class="general-btn">Add to cart</button>
+            </div>
+            <div class="card">
+                <img src="./laptop7.png" alt="">
+                <p id="laptop8">Hp EliteBook G6 Laptop- Intel Core I5- TOUCHSCREEN -16GB RAM512GB SSDBacklit KeyboardFP Reader Windows11 Pro+ BAG price=₦ 535,000</p>
+                <button class="general-btn">Add to cart</button>
+            </div>
+        </div>
+        <!-- THIRD ROW -->
+        <div class="general-row">
+            <div class="card">
+                <img src="./laptop1.png" alt="">
+                <p id="laptop9">DELL Latitude 7490 512GB SSD32GB RAM Intel Core I5 BACKLIGHT KEYBOARD- WINS 11+BAG price=₦ 510,000</p>
+                <button class="general-btn">Add to cart</button>
+            </div>
+            <div class="card">
+                <img src="./laptop2.png" alt="">
+                <p id="laptop10">DELL Latitude 7490 Intel Core I5- 16GB RAM512GB SSD TOUCHSCREENBACKLIGHT KEYBOARDWIN 11 PRO+BAG price=₦ 450,000.jpeg</p>
+                <button class="general-btn">Add to cart</button>
+            </div>
+            <div class="card">
+                <img src="./laptop3.png" alt="">
+                <p id="laptop11">DELL Latitude 7490 Laptop- Intel Core I5 - 512GB SSD16GB RAM BACKLIGHT KEYBOARD- Windows 11 PRO+BAG price=₦430,000</p>
+                <button class="general-btn">Add to cart</button>
+            </div>
+            <div class="card">
+                <img src="./laptop4.png" alt="">
+                <p id="laptop12">DELL Latitude 7490 Laptop- Intel Core I5 - 512GB SSD16GB RAM BACKLIGHT KEYBOARD- Windows 11 PRO+BAG price=430,000</p>
+                <button class="general-btn">Add to cart</button>
+            </div>
+            </div>
+        </div>
+</body>
+<script src="auth.js"></script>
+<script>
+
+function add1(){
+    const p1 = document.getElementById("laptop1").textContent;
+    let items = JSON.parse(localStorage.getItem("allProducts")) || [];
+    items.push({ p});
+    localStorage.setItem("allProducts", JSON.stringify(items));
+    alert("Information saved! You can open Page B to see it.");
+}
+    </script>
+    
+</html>
